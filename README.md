@@ -1,5 +1,5 @@
 # Unleash Django
-Atom enhanced support for the Django framework
+Atom enhanced support for Django
 
 ## Description
 ***Unleash Django*** is an **Atom** editor package made for web developers with a concern of productivity.
