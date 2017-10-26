@@ -12,10 +12,10 @@
     "Language",
     "Python",
     "HTML",
-    "Web"
+    "Web",
     "Simply",
     "Support",
-    "language-django",
+    "language-django"
   ],
   "repository": "https://github.com/hectocore/unleash-django",
   "license": "GPLv3",
