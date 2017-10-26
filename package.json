@@ -1,7 +1,7 @@
 {
   "name": "unleash-django",
   "main": "./lib/unleash-django",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Atom enhanced support for the Django framework",
   "keywords": [
     "Django",
