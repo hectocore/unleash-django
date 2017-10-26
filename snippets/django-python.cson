@@ -25,7 +25,7 @@
   # Models
   'Model':
     'prefix': 'model'
-    'body': 'class ${1:NAME}(models.Model):\n\t\"\"\"Django data model ${1:NAME}\"\"\"\n\t${0}\n\tclass Meta:\n\t\tverbose_name = \'${1:NAME}\'\n\t\tverbose_name_plural = \'${1:NAME}s\'\n\n\tdef __unicode__(self):\n\t\treturn str(self.id)'
+    'body': 'class ${1:NAME}(models.Model):\n\t\"\"\"Django data model ${1:NAME}\"\"\"\n\t${0}\n\tclass Meta:\n\t\tverbose_name = \'${1:NAME}\'\n\t\tverbose_name_plural = \'${1:NAME}s\'\n\n\tdef __str__(self):\n\t\treturn str(self.id)'
   'Model AutoField':
     'prefix': 'model-auto'
     'body': '${1:id} = models.AutoField(primary_key=${2:True})${0}'
