@@ -1,0 +1,27 @@
+{
+  "name": "unleash-django",
+  "main": "./lib/unleash-django",
+  "version": "1.0",
+  "description": "Atom enhanced support for the Django framework",
+  "keywords": [
+    "Django",
+    "Unleash",
+    "Atom",
+    "language-django",
+    "Simply",
+    "Productive",
+    "Framework",
+    "Template",
+    "Support",
+    "Language",
+    "Python",
+    "HTML",
+    "Web"
+  ],
+  "repository": "https://github.com/hectocore/unleash-django",
+  "license": "GPLv3",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {}
+}

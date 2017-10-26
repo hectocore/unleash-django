@@ -1,0 +1,126 @@
+'.source.python.django':
+  # Admin
+  'Admin ModelAdmin':
+    'prefix': 'admin-model'
+    'body': 'class ${1:NAME}Admin(admin.ModelAdmin):\n\t\"\"\"Django admin ModelAdmin for data model ${1:NAME}\"\"\"\n\tmodel = ${1:NAME}\n\t${0}'
+  'Admin ModelAdmin (manual)':
+    'prefix': 'admin-model-manual'
+    'body': 'class ${1:NAME}Admin(admin.ModelAdmin):\n\t\"\"\"Django admin ModelAdmin for data model ${1:NAME}\"\"\"\n\tlist_display = (${2})\n\tlist_filter = (${3})\n\tordering = (${4})\n\tsearch_fields = (${5})\n\tfields = (${6})\n\t${0}'
+  'Admin Site Register':
+    'prefix': 'admin-site-register'
+    'body': 'admin.site.register(${1:MODEL}, ${1:MODEL}Admin)${0}'
+  'Admin StackedInline':
+    'prefix': 'admin-stacked'
+    'body': 'class ${1:NAME}Admin(admin.StackedInline):\n\t\"\"\"Django admin StackedInline for data model ${1:NAME}\"\"\"\n\tmodel = ${1:NAME}\n\textra = ${2:0}\n\t${0}'
+  'Admin TabularInline':
+    'prefix': 'admin-tabular'
+    'body': 'class ${1:NAME}Admin(admin.TabularInline):\n\t\"\"\"Django admin TabularInline for data model ${1:NAME}\"\"\"\n\tmodel = ${1:NAME}\n\textra = ${2:0}\n\t${0}'
+  # Forms
+  'Form':
+    'prefix': 'form'
+    'body': 'class ${1:NAME}Form(forms.Form):\n\t\"\"\"Django form ${1:NAME}\"\"\"\n\t${0}'
+  'ModelForm':
+    'prefix': 'form-model'
+    'body': 'class ${1:NAME}Form(forms.ModelForm):\n\t\"\"\"Django ModelForm for model ${1:NAME}\"\"\"\n\tclass Meta:\n\t\tmodel = ${1:NAME}\n\t\tfields = [${2}]${0}'
+  # Models
+  'Model':
+    'prefix': 'model'
+    'body': 'class ${1:NAME}(models.Model):\n\t\"\"\"Django data model ${1:NAME}\"\"\"\n\t${0}\n\tclass Meta:\n\t\tverbose_name = \'${1:NAME}\'\n\t\tverbose_name_plural = \'${1:NAME}s\'\n\n\tdef __unicode__(self):\n\t\treturn str(self.id)'
+  'Model AutoField':
+    'prefix': 'model-auto'
+    'body': '${1:id} = models.AutoField(primary_key=${2:True})${0}'
+  'Model BigInteger':
+    'prefix': 'model-bigint'
+    'body': '${1:bignumber} = models.BigIntegerField(verbose_name=\'${2}\')${0}'
+  'Model BinaryField':
+    'prefix': 'model-bin'
+    'body': '${1:binary} = models.BinaryField(verbose_name=\'${2}\')${0}'
+  'Model BooleanField':
+    'prefix': 'model-bool'
+    'body': '${1:boolean} = models.BooleanField(verbose_name=\'${2}\')${0}'
+  'Model CharField':
+    'prefix': 'model-char'
+    'body': '${1:char} = models.CharField(max_length=${2:100}, verbose_name=\'${3}\')${0}'
+  'Model DateField':
+    'prefix': 'model-date'
+    'body': '${1:date} = models.DateField(auto_now=${2:False}, auto_now_add=${3:False}, verbose_name=\'${4}\')${0}'
+  'Model DateTimeField':
+    'prefix': 'model-dt'
+    'body': '${1:datetime} = models.DateTimeField(auto_now=${2:False}, auto_now_add=${3:False}, verbose_name=\'${4}\')${0}'
+  'Model DecimalField':
+    'prefix': 'model-dec'
+    'body': '${1:decimal} = models.DecimalField(max_digits=${2:5}, decimal_places=${3:2}, verbose_name=\'${4}\')${0}'
+  'Model DurationField':
+    'prefix': 'model-duration'
+    'body': '${1:duration} = models.DurationField(verbose_name=\'${2}\')${0}'
+  'Model EmailField':
+    'prefix': 'model-email'
+    'body': '${1:email} = models.EmailField(verbose_name=\'${2}\')${0}'
+  'Model FileField':
+    'prefix': 'model-file'
+    'body': '${1:uploadfile} = models.FileField(upload_to=\'${2:uploads/}\', verbose_name=\'${3}\')${0}'
+  'Model FilePathField':
+    'prefix': 'model-path'
+    'body': '${1:filepath} = models.FilePathField(path=\'${2:home/example}\', match=${3:None}, recursive=${4:False}, verbose_name=\'${5}\')${0}'
+  'Model FloatField':
+    'prefix': 'model-float'
+    'body': '${1:floatnumber} = models.FloatField(verbose_name=\'${2}\')${0}'
+  'Model ForeignKey':
+    'prefix': 'model-fkey'
+    'body': '${1:foreignkey} = models.ForeignKey(\'${2:APP.OTHERMODEL}\', related_name=\'${3}\', verbose_name=\'${4}\')${0}'
+  'Model ImageField':
+    'prefix': 'model-img'
+    'body': '${1:image} = models.ImageField(upload_to=\'${2:uploads/}\', verbose_name=\'${3}\')${0}'
+  'Model IntegerField':
+    'prefix': 'model-int'
+    'body': '${1:number} = models.IntegerField(verbose_name=\'${2}\')${0}'
+  'Model GenericIPAddressField':
+    'prefix': 'model-gip'
+    'body': '${1:genericip} = models.GenericIPAddressField(protocol=\'${2:both}\', unpack_ipv4=${3:False}, verbose_name=\'${4}\')${0}'
+  'Model ManyToManyField':
+    'prefix': 'model-mtm'
+    'body': '${1:manytomany} = models.ManyToManyField(\'${2:APP.OTHERMODEL}\', verbose_name=\'${3}\')${0}'
+  'Model NullBooleanField':
+    'prefix': 'model-nbool'
+    'body': '${1:boolean} = models.NullBooleanField(verbose_name=\'${2}\')${0}'
+  'Model OneToOneField':
+    'prefix': 'model-1t1'
+    'body': '${1:onetoone} = models.OneToOneField(\'${2:APP.OTHERMODEL}\', on_delete=models.${3:CASCADE}, related_name=\'${4}\', verbose_name=\'${5}\')${0}'
+  'Model PositiveIntegerField':
+    'prefix': 'model-pint'
+    'body': '${1:posnumber} = models.PositiveIntegerField(verbose_name=\'${2}\')${0}'
+  'Model PositiveSmallIntegerField':
+    'prefix': 'model-psint'
+    'body': '${1:smallposnumber} = models.PositiveSmallIntegerField(verbose_name=\'${2}\')${0}'
+  'Model SlugField':
+    'prefix': 'model-slug'
+    'body': '${1:slug} = models.SlugField(verbose_name=\'${2}\')${0}'
+  'Model SmallIntegerField':
+    'prefix': 'model-sint'
+    'body': '${1:smallnumber} = models.SmallIntegerField(verbose_name=\'${2}\')${0}'
+  'Model TextField':
+    'prefix': 'model-text'
+    'body': '${1:text} = models.TextField(verbose_name=\'${2}\')${0}'
+  'Model TimeField':
+    'prefix': 'model-time'
+    'body': '${1:time} = models.DateField(auto_now=${2:False}, auto_now_add=${3:False}, verbose_name=\'${4}\')${0}'
+  'Model URLField':
+    'prefix': 'model-url'
+    'body': '${1:url} = models.URLField(verbose_name=\'${2}\')${0}'
+  'Model UUIDField':
+    'prefix': 'model-uuid'
+    'body': '${1:uuid} = models.UUIDField(primary_key=${2:True}, default=${3:uuid.uuid4}, editable=${4:False}, verbose_name=\'${5}\')${0}'
+  # Urls
+  'URL':
+    'prefix': 'url'
+    'body': 'url(r\'^${1}/\$\', views.${1:VIEW}, name=\'${1:NAME}\'),${0}'
+  'URL (main)':
+    'prefix': 'url-main'
+    'body': 'url(r\'^${1}/\', include(\'${1:APP}.urls\', namespace=\'${1:NAME}\')),${0}'
+  'URL Patterns':
+    'prefix': 'url-patterns'
+    'body': 'urlpatterns = [\n\t${0}\n]'
+  # Views
+  'View':
+    'prefix': 'view'
+    'body': 'def ${1:NAME}(request):\n\t\"\"\"Django view ${1:NAME}\"\"\"\n\t${0}\n\treturn render(request, \'${2:APP}/${3:TEMPLATE}.html\')'

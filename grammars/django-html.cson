@@ -1,0 +1,109 @@
+'scopeName': 'text.html.basic.django'
+'fileTypes': [
+  'ejs'
+  'htm'
+  'html'
+  'kit'
+  'shtml'
+  'tmpl'
+  'tpl'
+  'xhtml'
+  'ejs.django'
+  'htm.django'
+  'html.django'
+  'kit.django'
+  'shtml.django'
+  'tmpl.django'
+  'tpl.django'
+  'xhtml.django'
+]
+'firstLineMatch': '<(?i:(!DOCTYPE\\s*)?html)'
+'name': 'Django Template (HTML)'
+'patterns': [
+  {
+    'begin': '{% comment %}'
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.django'
+    'end': '{% endcomment %}'
+    'name': 'comment.block.django'
+  }
+  {
+    'begin': '{#'
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.django'
+    'end': '#}'
+    'name': 'comment.line.number-sign.django'
+  }
+  {
+    'begin': '{{'
+    'end': '}}'
+    'name': 'variable.parameter.function.django'
+  }
+  {
+    'begin': '({%)'
+    'captures':
+      '1':
+        'name': 'entity.other.django.tagbraces'
+    'end': '(%})'
+    'name': 'meta.scope.django.tag'
+    'patterns': [
+      {
+        'match': '\\b(autoescape|endautoescape|block|endblock|blocktrans|endblocktrans|csrf_token|cycle|debug|extends|filter|endfilter|firstof|for|endfor|empty|if|elif|else|endif|ifequal|endifequal|ifnotequal|endifnotequal|ifchanged|endifchanged|include|load|lorem|now|regroup|resetcycle|spaceless|endspaceless|templatetag|url|verbatim|endverbatim|widthratio|with|endwith)\\b'
+        'name': 'keyword.control.django'
+      }
+      {
+        'match': '\\b(and|or|not|in|is|by|as)\\b'
+        'name': 'keyword.operator.logical.django'
+      }
+      {
+        'match': '<\\=|>\\=|\\=\\=|<|>|\\!\\='
+        'name': 'keyword.operator.comparison.django'
+      }
+      {
+        'match': '\\|(add|addslashes|capfirst|center|cut|date|default|default_if_none|dictsort|dictsortreversed|divisibleby|escape|escapejs|filesizeformat|first|floatformat|force_escape|get_digit|iriencode|join|last|length|length_is|linebreaks|linebreaksbr|linenumbers|ljust|lower|make_list|phone2numeric|pluralize|pprint|random|rjust|safe|safeseq|slice|slugify|stringformat|striptags|time|timesince|timeuntil|title|truncatechars|truncatechars_html|truncatewords|truncatewords_html|unordered_list|upper|urlencode|urlize|urlizetrunc|wordcount|wordwrap|yesno)\\b'
+        'name': 'support.function.filter.django'
+      }
+      {
+        'begin': '(")'
+        'beginCaptures':
+          '1':
+            'name': 'punctuation.definition.string.begin.django'
+        'comment': 'double quoted string'
+        'end': '((?<=")(")|")|(\\n)'
+        'endCaptures':
+          '1':
+            'name': 'punctuation.definition.string.end.django'
+          '2':
+            'name': 'meta.empty-string.double.django'
+          '3':
+            'name': 'invalid.illegal.unclosed-string.django'
+        'name': 'string.quoted.double.single-line.django'
+      }
+      {
+        'begin': '(\')'
+        'beginCaptures':
+          '1':
+            'name': 'punctuation.definition.string.begin.django'
+        'comment': 'single quoted string'
+        'end': '((?<=\')(\')|\')|(\\n)'
+        'endCaptures':
+          '1':
+            'name': 'punctuation.definition.string.end.django'
+          '2':
+            'name': 'meta.empty-string.single.django'
+          '3':
+            'name': 'invalid.illegal.unclosed-string.django'
+        'name': 'string.quoted.single.single-line.django'
+      }
+      {
+        'match': '[a-zA-Z_0-9]+'
+        'name': 'string.unquoted.django'
+      }
+    ]
+  }
+  {
+    'include': 'text.html.basic'
+  }
+]
