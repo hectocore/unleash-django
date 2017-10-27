@@ -67,7 +67,7 @@
     'body': '${1:floatnumber} = models.FloatField(verbose_name=\'${2}\')${0}'
   'Model ForeignKey':
     'prefix': 'model-fkey'
-    'body': '${1:foreignkey} = models.ForeignKey(\'${2:APP.OTHERMODEL}\', related_name=\'${3}\', verbose_name=\'${4}\')${0}'
+    'body': '${1:foreignkey} = models.ForeignKey(\'${2:APP.OTHERMODEL}\', on_delete=models.${3:CASCADE}, related_name=\'${4}\', verbose_name=\'${5}\')${0}'
   'Model ImageField':
     'prefix': 'model-img'
     'body': '${1:image} = models.ImageField(upload_to=\'${2:uploads/}\', verbose_name=\'${3}\')${0}'
