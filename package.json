@@ -18,6 +18,7 @@
     "language-django"
   ],
   "repository": "https://github.com/hectocore/unleash-django",
+  "bugs": "https://github.com/hectocore/unleash-django/issues",
   "license": "GPLv3",
   "engines": {
     "atom": "*"

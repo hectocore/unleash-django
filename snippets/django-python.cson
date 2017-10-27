@@ -45,7 +45,7 @@
     'prefix': 'model-date'
     'body': '${1:date} = models.DateField(auto_now=${2:False}, auto_now_add=${3:False}, verbose_name=\'${4}\')${0}'
   'Model DateTimeField':
-    'prefix': 'model-dt'
+    'prefix': 'model-date-time'
     'body': '${1:datetime} = models.DateTimeField(auto_now=${2:False}, auto_now_add=${3:False}, verbose_name=\'${4}\')${0}'
   'Model DecimalField':
     'prefix': 'model-dec'
@@ -103,7 +103,7 @@
     'body': '${1:text} = models.TextField(verbose_name=\'${2}\')${0}'
   'Model TimeField':
     'prefix': 'model-time'
-    'body': '${1:time} = models.DateField(auto_now=${2:False}, auto_now_add=${3:False}, verbose_name=\'${4}\')${0}'
+    'body': '${1:time} = models.TimeField(auto_now=${2:False}, auto_now_add=${3:False}, verbose_name=\'${4}\')${0}'
   'Model URLField':
     'prefix': 'model-url'
     'body': '${1:url} = models.URLField(verbose_name=\'${2}\')${0}'
