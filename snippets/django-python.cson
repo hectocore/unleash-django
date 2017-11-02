@@ -124,3 +124,8 @@
   'View':
     'prefix': 'view'
     'body': 'def ${1:NAME}(request):\n\t\"\"\"Django view ${1:NAME}\"\"\"\n\t${0}\n\treturn render(request, \'${2:APP}/${3:TEMPLATE}.html\')'
+
+  # Django REST framework
+  'Django REST Model Serializer':
+    'prefix': 'rest-serializer'
+    'body': 'class ${1:NAME}Serializer(serializers.ModelSerializer):\n\t\"\"\"Django REST serializer for data model ${1:NAME}\"\"\"\n\tclass Meta:\n\t\tmodel = ${1:NAME}\n\t\tfields = [${2:\'uuid\',}]${0}'
