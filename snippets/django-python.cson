@@ -131,7 +131,7 @@
     'body': 'class ${1:NAME}Serializer(serializers.ModelSerializer):\n\t\"\"\"Django REST serializer for data model ${1:NAME}\"\"\"\n\tclass Meta:\n\t\tmodel = ${1:NAME}\n\t\tfields = [${2:\'uuid\',}]${0}'
   'Django REST ListCreateAPIView':
     'prefix': 'rest-view-list-create'
-    'body': 'class ${1:NAME}Serializer(ListCreateAPIView):\n\t\"\"\"Django REST ListCreateAPIView for data model ${1:NAME}\"\"\"\n\tqueryset = ${1:NAME}.objects.all()\n\tpermission_classes = (${2:IsAuthenticated},)\n\tserializer_class = ${1:NAME}Serializer\n\tlookup_field = \'${3:uuid}\'${0}'
+    'body': 'class ${1:NAME}ListCreateAPIView(ListCreateAPIView):\n\t\"\"\"Django REST ListCreateAPIView for data model ${1:NAME}\"\"\"\n\tqueryset = ${1:NAME}.objects.all()\n\tpermission_classes = (${2:IsAuthenticated},)\n\tserializer_class = ${1:NAME}Serializer\n\tlookup_field = \'${3:uuid}\'${0}'
   'Django REST RetrieveUpdateDestroyAPIView':
     'prefix': 'rest-view-retrieve-update-destroy'
-    'body': 'class ${1:NAME}Serializer(RetrieveUpdateDestroyAPIView):\n\t\"\"\"Django REST RetrieveUpdateDestroyAPIView for data model ${1:NAME}\"\"\"\n\tqueryset = ${1:NAME}.objects.all()\n\tpermission_classes = (${2:IsAuthenticated},)\n\tserializer_class = ${1:NAME}Serializer\n\tlookup_field = \'${3:uuid}\'${0}'
+    'body': 'class ${1:NAME}RetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):\n\t\"\"\"Django REST RetrieveUpdateDestroyAPIView for data model ${1:NAME}\"\"\"\n\tqueryset = ${1:NAME}.objects.all()\n\tpermission_classes = (${2:IsAuthenticated},)\n\tserializer_class = ${1:NAME}Serializer\n\tlookup_field = \'${3:uuid}\'${0}'
