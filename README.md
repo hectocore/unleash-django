@@ -6,6 +6,10 @@ Atom enhanced support for Django
 Its goal is to give an enhanced support of the **Django framework** to this text editor.
 It is continuously updated in order to be consistent with the latest stable Django release.
 
+The objective is to regroup some best practices from:
+- [Two Scoops of Django](https://www.twoscoopspress.com)
+- [Django official documentation](https://docs.djangoproject.com/)
+
 ## Installation
 There are three ways to install *Unleash Django*:
 * Open Atom, go to *Settings -> Install -> Package Search*, and search **unleash-django**
