@@ -24,7 +24,7 @@ Just open a file of your Django project and you're ready to go!
 ## Snippets
 Here is a list of all available snippets:
 
-Note that you can abreviate the prefix, for example if you type ***mdt***, Atom will understand that you mean ***model-date-time*** and will automaticaly create a **Model DateTimeField**.
+Note that you can abbreviate the prefix, for example if you type ***mdt***, Atom will understand that you mean ***model-date-time*** and will automaticaly create a **Model DateTimeField**.
 
 ### Django Admin Snippets
 ![Unleash Django: example of admin-model use](unleash-django_-_example_admin-model.gif)
