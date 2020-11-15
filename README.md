@@ -6,6 +6,10 @@ Atom enhanced support for Django
 Its goal is to give an enhanced support of the **Django framework** to this text editor.
 It is continuously updated in order to be consistent with the latest stable Django release.
 
+The objective is to regroup some best practices from:
+- [Two Scoops of Django](https://www.twoscoopspress.com)
+- [Django official documentation](https://docs.djangoproject.com/)
+
 ## Installation
 There are three ways to install *Unleash Django*:
 * Open Atom, go to *Settings -> Install -> Package Search*, and search **unleash-django**
@@ -23,6 +27,8 @@ Here is a list of all available snippets:
 Note that you can abreviate the prefix, for example if you type ***mdt***, Atom will understand that you mean ***model-date-time*** and will automaticaly create a **Model DateTimeField**.
 
 ### Django Admin Snippets
+![Example of code snippets use](example.gif)
+
 
 | Prefix                            | Content                                  |
 |-----------------------------------|------------------------------------------|
